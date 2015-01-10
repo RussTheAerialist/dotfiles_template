@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 " Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
@@ -19,7 +19,7 @@ Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
 
-" colorscheme solarized
+colorscheme solarized
 let g:solarized_termcolors=256
 let g:airline_powerline_fonts = 1
 set laststatus=2
