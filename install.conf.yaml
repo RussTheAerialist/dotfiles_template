@@ -7,5 +7,5 @@
     ~/.vim: vim/
 
 - shell:
-  - [git update-submodules, Installing/updating submodules]
+  - [git submodule update --recursive, Installing/updating submodules]
 
