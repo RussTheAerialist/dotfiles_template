@@ -7,5 +7,6 @@
     ~/.vim: vim/
 
 - shell:
-  - [git submodule update --recursive, Installing/updating submodules]
+  - [git submodule update --init --recursive, Installing/updating submodules]
+  - [tools/build-racer, Building/Updating Racer]
 

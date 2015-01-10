@@ -15,6 +15,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'wting/rust.vim'
+Plugin 'phildawes/racer'
 
 call vundle#end()
 filetype plugin indent on

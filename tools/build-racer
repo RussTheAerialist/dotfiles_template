@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+TOOLS_DIR="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
+BASE_DIR="$(cd "$TOOLS_DIR" && cd .. && pwd)"
+RACER_DIR="$(cd "$BASE_DIR" && cd vim/bundle/racer && pwd)"
+RACER_BINARY="$RACER_DIR/bin/racer"
+
+SRC_FILES=$(find "$RACER_DIR/src" -name "*.rs")
+
+for f in $SRC_FILES; do
+ if [[ "$f" -nt "$RACER_BINARY" ]]; then
+     BUILD_RACER=1
+ fi
+done
+
+if [ -n "$BUILD_RACER" ]; then
+    cd "$RACER_DIR" && make
+fi
