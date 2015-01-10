@@ -80,3 +80,4 @@ export GOPATH="/Users/rhay/code/firmata-arduino/test/neopixel_test/go/"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vi=/usr/local/bin/vim
