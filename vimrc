@@ -12,7 +12,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 " Plugin 'tpope/vim-surround'
-" Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-endwise'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'wting/rust.vim'
 
