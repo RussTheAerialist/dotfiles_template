@@ -25,8 +25,20 @@ Plugin 'sudar/vim-arduino-syntax'
 call vundle#end()
 filetype plugin indent on
 
+" Color Syntax Highlighting Configuration
 syntax enable
 set background=dark
 colorscheme solarized
 let g:airline_powerline_fonts = 1
 set laststatus=2
+
+" NERDTree Configuration
+"   Key bindings
+    map <C-n> :NERDTreeToggle<CR>
+
+"   Start nerdtree if you just start vim without files
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"   Quit vim if nerdtree is the last window open
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
