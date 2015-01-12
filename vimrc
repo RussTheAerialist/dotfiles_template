@@ -16,6 +16,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'wting/rust.vim'
 Plugin 'phildawes/racer'
+Plugin 'sudar/vim-arduino-syntax'
 
 call vundle#end()
 filetype plugin indent on
