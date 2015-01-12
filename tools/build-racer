@@ -4,6 +4,11 @@ TOOLS_DIR="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
 BASE_DIR="$(cd "$TOOLS_DIR" && cd .. && pwd)"
 RACER_DIR="$(cd "$BASE_DIR" && cd vim/bundle/racer && pwd)"
 RACER_BINARY="$RACER_DIR/bin/racer"
+RUSTC_PATH=$(which rustc)
+
+if [ -z "$RUSTC_PATH" ]; then
+  exit 0
+fi
 
 SRC_FILES=$(find "$RACER_DIR/src" -name "*.rs")
 
@@ -16,3 +21,6 @@ done
 if [ -n "$BUILD_RACER" ]; then
     cd "$RACER_DIR" && make
 fi
+
+mkdir -p $HOME/.dotfiles
+touch $HOME/.dotfiles/rust

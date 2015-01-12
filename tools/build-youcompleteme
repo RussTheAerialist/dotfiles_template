@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+TOOLS_DIR="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
+BASE_DIR="$(cd "$TOOLS_DIR" && cd .. && pwd)"
+YCM_PATH="$(cd "$BASE_DIR" && cd vim/bundle/YouCompleteMe && pwd)"
+YCM_SO="$YCM_PATH/third_party/ycmd/ycm_core.so"
+
+if [ ! -f "$YCM_SO" ]; then
+  cd "$YCM_PATH" && ./install.sh --clang-completer
+fi

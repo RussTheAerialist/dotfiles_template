@@ -9,4 +9,5 @@
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
   - [tools/build-racer, Building/Updating Racer]
+  - [tools/build-youcompleteme, Building/Updating YCM]
 
