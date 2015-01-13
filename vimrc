@@ -42,3 +42,18 @@ set laststatus=2
 
 "   Quit vim if nerdtree is the last window open
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Pane Key Bindings
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Tab Settings
+set expandtab  " spaces > tabs
+set shiftwidth=4
+set softtabstop=4
+
+" Git Gutter Settings
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_highlight_lines = 1
