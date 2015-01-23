@@ -9,9 +9,8 @@ export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="crunch"
 # ZSH_THEME="gallifrey"
 # ZSH_THEME="lukerandall"
-ZSH_THEME="sorin"
-[[ -e $HOME/.domain ]] && WORK_DOMAIN="$(cat $HOME/.domain)" || WORK_DOMAIN="blah"
-[[ $(hostname) =~ "$WORK_DOMAIN$" ]] && ZSH_THEME="agnoster"
+# ZSH_THEME="sorin"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
