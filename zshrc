@@ -10,6 +10,10 @@ export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="gallifrey"
 # ZSH_THEME="lukerandall"
 # ZSH_THEME="sorin"
+if [ -z "$SSH_CONNECTION" ]; then
+    # Local User
+    DEFAULT_USER=$(whoami)
+fi
 ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
