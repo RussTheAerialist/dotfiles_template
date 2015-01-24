@@ -13,13 +13,11 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'geekjuice/vim-mocha'
 Plugin 'christoomey/vim-tmux-navigator'
 
 if filereadable(expand("$HOME/.dotfiles/rust"))
   Plugin 'wting/rust.vim'
-  Plugin 'phildawes/racer'
 endif
 
 Plugin 'sudar/vim-arduino-syntax'
