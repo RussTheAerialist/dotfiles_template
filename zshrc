@@ -9,7 +9,12 @@ export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="crunch"
 # ZSH_THEME="gallifrey"
 # ZSH_THEME="lukerandall"
-ZSH_THEME="sorin"
+# ZSH_THEME="sorin"
+if [ -z "$SSH_CONNECTION" ]; then
+    # Local User
+    DEFAULT_USER=$(whoami)
+fi
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -68,6 +73,8 @@ export ARCHFLAGS="-arch x86_64"
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/code/go"
 export GOPATH="/Users/rhay/code/firmata-arduino/test/neopixel_test/go/"
+
+export P4CONFIG=.p4config
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
