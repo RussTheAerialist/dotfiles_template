@@ -15,6 +15,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'geekjuice/vim-mocha'
+Plugin 'christoomey/vim-tmux-navigator'
 
 if filereadable(expand("$HOME/.dotfiles/rust"))
   Plugin 'wting/rust.vim'
@@ -37,18 +38,13 @@ set laststatus=2
 "   Key bindings
     map <C-n> :NERDTreeToggle<CR>
 
-"   Start nerdtree if you just start vim without files
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
 "   Quit vim if nerdtree is the last window open
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Pane Key Bindings
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " Tab Settings
 set expandtab  " spaces > tabs
