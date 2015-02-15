@@ -14,7 +14,7 @@ if [ -z "$SSH_CONNECTION" ]; then
     # Local User
     DEFAULT_USER=$(whoami)
 fi
-ZSH_THEME="agnoster"
+ZSH_THEME="celestial"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

@@ -5,6 +5,7 @@
     ~/.zshrc: zshrc
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.vim: vim/
+    ~/.oh-my-zsh/custom/celestial.zsh-theme: themes/celestial/celestial.zsh-theme
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]

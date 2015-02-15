@@ -43,3 +43,6 @@
 [submodule "vim/bundle/vim-tmux-navigator"]
 	path = vim/bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule "themes/celestial"]
+	path = themes/celestial
+	url = https://gist.github.com/513167c8fb386e9e0673.git
