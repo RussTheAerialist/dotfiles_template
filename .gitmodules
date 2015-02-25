@@ -52,3 +52,6 @@
 [submodule "vim/bundle/vim-javascript-syntax"]
 	path = vim/bundle/vim-javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax
+[submodule "vim/bundle/vim-easymotion"]
+	path = vim/bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion

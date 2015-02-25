@@ -17,6 +17,7 @@ Plugin 'geekjuice/vim-mocha'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'moll/vim-node'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'Lokaltog/vim-easymotion'
 
 if filereadable(expand("$HOME/.dotfiles/rust"))
   Plugin 'wting/rust.vim'
