@@ -15,6 +15,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'geekjuice/vim-mocha'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'moll/vim-node'
 
 if filereadable(expand("$HOME/.dotfiles/rust"))
   Plugin 'wting/rust.vim'

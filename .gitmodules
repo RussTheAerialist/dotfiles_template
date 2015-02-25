@@ -46,3 +46,6 @@
 [submodule "themes/celestial"]
 	path = themes/celestial
 	url = https://gist.github.com/513167c8fb386e9e0673.git
+[submodule "vim/bundle/vim-node"]
+	path = vim/bundle/vim-node
+	url = https://github.com/moll/vim-node.git
