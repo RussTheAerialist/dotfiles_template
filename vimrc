@@ -13,6 +13,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-dispatch'
 Plugin 'geekjuice/vim-mocha'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'moll/vim-node'
@@ -42,10 +43,11 @@ set laststatus=2
 "   Quit vim if nerdtree is the last window open
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>s :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>t :Dispatch<CR>
 
 " Tab Settings
 set expandtab  " spaces > tabs

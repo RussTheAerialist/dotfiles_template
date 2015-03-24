@@ -54,7 +54,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow osx pip sudo virtualenvwrapper)
+plugins=(git git-flow osx pip sudo virtualenvwrapper common-aliases)
 
 source $ZSH/oh-my-zsh.sh
 
