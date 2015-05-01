@@ -61,3 +61,6 @@
 [submodule "vim/bundle/vim-openscad"]
 	path = vim/bundle/vim-openscad
 	url = git@github.com:sirtaj/vim-openscad.git
+[submodule "vim/bundle/jedi-vim"]
+	path = vim/bundle/jedi-vim
+	url = git@github.com:davidhalter/jedi-vim.git
