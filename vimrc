@@ -57,3 +57,6 @@ set softtabstop=4
 " Git Gutter Settings
 let g:gitgutter_sign_column_always = 1
 let g:gitgutter_highlight_lines = 1
+
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType js setlocal shiftwidth=2 tabstop=2
