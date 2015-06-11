@@ -59,3 +59,6 @@ set softtabstop=4
 " Git Gutter Settings
 let g:gitgutter_sign_column_always = 1
 let g:gitgutter_highlight_lines = 1
+
+" jedi-vim
+let g:jedi#show_call_signatures="2"
