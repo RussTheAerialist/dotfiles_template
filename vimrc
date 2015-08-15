@@ -20,6 +20,7 @@ Plugin 'moll/vim-node'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'sirtaj/vim-openscad'
+Plugin 'davidhalter/jedi-vim'
 
 if filereadable(expand("$HOME/.dotfiles/rust"))
   Plugin 'wting/rust.vim'
@@ -58,3 +59,10 @@ set softtabstop=2
 " Git Gutter Settings
 let g:gitgutter_sign_column_always = 1
 let g:gitgutter_highlight_lines = 1
+
+" jedi-vim
+let g:jedi#show_call_signatures="2"
+
+" special indent settings
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType js setlocal shiftwidth=2 tabstop=2
