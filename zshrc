@@ -88,3 +88,18 @@ export P4CONFIG=.p4config
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=/usr/local/bin/vim
+
+function mdhdr () { grep -e '^#' $1 }
+function mdcnthdr () { mdhdr $1 | sort | uniq -c }
+function wcc () {
+  mkdir -p /tmp/chp 2> /dev/null
+  FILE=$(pwd)/$1
+  (cd /tmp/chp && csplit -k $FILE '/^#/' {99}) 2> /dev/null
+  for n in $(ls /tmp/chp)
+  do
+    CHAPTER=$(grep -e '^#' /tmp/chp/$n)
+    LINE_COUNT=$(wc -w /tmp/chp/$n | cut -d/ -f1)
+    echo $CHAPTER $LINE_COUNT
+  done
+  rm -rf /tmp/chp
+}
