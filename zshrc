@@ -87,7 +87,8 @@ export P4CONFIG=.p4config
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vi=/usr/local/bin/vim
+alias vi=`which vim`
+alias fuck='sudo $(fc -ln -1)'
 
 function mdhdr () { grep -e '^#' $1 }
 function mdcnthdr () { mdhdr $1 | sort | uniq -c }
