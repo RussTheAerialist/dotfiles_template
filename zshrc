@@ -104,3 +104,6 @@ function wcc () {
   done
   rm -rf /tmp/chp
 }
+
+# added by travis gem
+[ -f /home/rhay/.travis/travis.sh ] && source /home/rhay/.travis/travis.sh
