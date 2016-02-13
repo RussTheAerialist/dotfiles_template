@@ -54,8 +54,10 @@ plugins=(git git-flow osx pip sudo virtualenvwrapper common-aliases)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+ANDROID_SDK_PATH="$HOME/android-sdk/macosx"
+ANDROID_PATHS="$ANDROID_SDK_PATH/platform-tools:$ANDROID_SDK_PATH/tools"
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/bin:$ANDROID_PATHS"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -99,6 +101,10 @@ function wcc () {
   done
   rm -rf /tmp/chp
 }
+
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 # added by travis gem
 [ -f /home/rhay/.travis/travis.sh ] && source /home/rhay/.travis/travis.sh
