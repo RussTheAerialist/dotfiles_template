@@ -106,5 +106,9 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
 
+if [ $(uname) = "Darwin" ]; then
+  source $HOME/.iterm2_shell_integration.zsh
+fi
+
 # added by travis gem
 [ -f /home/rhay/.travis/travis.sh ] && source /home/rhay/.travis/travis.sh

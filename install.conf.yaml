@@ -6,6 +6,7 @@
     ~/.taskrc: taskrc
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.vim: vim/
+    ~/.iterm2_shell_integration.zsh: iterm2_shell_integration.zsh
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
