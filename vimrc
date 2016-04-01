@@ -21,6 +21,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'sirtaj/vim-openscad'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'racer-rust/vim-racer'
 
 if filereadable(expand("$HOME/.dotfiles/rust"))
   Plugin 'wting/rust.vim'
