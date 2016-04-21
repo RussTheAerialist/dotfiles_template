@@ -7,6 +7,7 @@
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.vim: vim/
     ~/.iterm2_shell_integration.zsh: iterm2_shell_integration.zsh
+    ~/.tmux.conf: tmux.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
