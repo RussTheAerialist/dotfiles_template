@@ -85,12 +85,12 @@ export P4CONFIG=.p4config
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=`which vim`
-alias fuck='sudo $(fc -ln -1)'
 alias epsync='aws s3 sync $HOME/poorimpulse_audio s3://episodes.poorimpulse.co'
 function pie() {
   mp3info -p "%f %m:%s " $1
   ls -l $1 | cut -d\  -f8
 }
+alias lss='ls -lSrh'
 
 function mdhdr () { grep -e '^#' $1 }
 function mdcnthdr () { mdhdr $1 | sort | uniq -c }
@@ -116,6 +116,10 @@ if which rbenv > /dev/null; then
 fi
 
 export RUST_SRC_PATH=$HOME/.rustc/rustc/src
+
+if [ $(uname) = "Darwin" ]; then
+  source $HOME/.iterm2_shell_integration.zsh
+fi
 
 # added by travis gem
 [ -f /home/rhay/.travis/travis.sh ] && source /home/rhay/.travis/travis.sh
