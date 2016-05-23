@@ -85,7 +85,11 @@ export P4CONFIG=.p4config
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=`which vim`
-alias fuck='sudo $(fc -ln -1)'
+epsync() { aws s3 sync --acl public-read $@ $HOME/poorimpulse_audio s3://episodes.poorimpulse.co }
+function pie() {
+  mp3info -p "%f %m:%s " $1
+  ls -l $1 | cut -d\  -f8
+}
 alias lss='ls -lSrh'
 
 function mdhdr () { grep -e '^#' $1 }
@@ -103,9 +107,15 @@ function wcc () {
   rm -rf /tmp/chp
 }
 
+function vict() {
+  vi $1 && cargo 'test'
+}
+
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
+
+export RUST_SRC_PATH=$HOME/.rustc/rustc/src
 
 if [ $(uname) = "Darwin" ]; then
   source $HOME/.iterm2_shell_integration.zsh
