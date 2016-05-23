@@ -8,6 +8,7 @@
     ~/.vim: vim/
     ~/.iterm2_shell_integration.zsh: iterm2_shell_integration.zsh
     ~/.tmux.conf: tmux.conf
+    ~/.npmrc: npmrc
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]

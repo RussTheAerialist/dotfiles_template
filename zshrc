@@ -85,7 +85,7 @@ export P4CONFIG=.p4config
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=`which vim`
-alias epsync='aws s3 sync $HOME/poorimpulse_audio s3://episodes.poorimpulse.co'
+epsync() { aws s3 sync --acl public-read $@ $HOME/poorimpulse_audio s3://episodes.poorimpulse.co }
 function pie() {
   mp3info -p "%f %m:%s " $1
   ls -l $1 | cut -d\  -f8
