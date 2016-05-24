@@ -22,6 +22,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'sirtaj/vim-openscad'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'racer-rust/vim-racer'
+Plugin 'rizzatti/dash.vim'
 
 if filereadable(expand("$HOME/.dotfiles/rust"))
   Plugin 'wting/rust.vim'
@@ -46,11 +47,13 @@ set laststatus=2
 "   Quit vim if nerdtree is the last window open
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+let mapleader = ','
 " map <Leader>t :call RunCurrentSpecFile()<CR>
 " map <Leader>s :call RunNearestSpec()<CR>
 " map <Leader>l :call RunLastSpec()<CR>
 " map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>t :Dispatch<CR>
+map <Leader>d <Plug>DashSearch
 
 " Tab Settings
 set expandtab  " spaces > tabs
