@@ -11,6 +11,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-dispatch'
@@ -35,9 +36,12 @@ filetype plugin indent on
 
 " Color Syntax Highlighting Configuration
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
+
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'bubblegum'
+let g:airline_mode_map = { '__': '--', 'n': 'N', 'i': 'I', 'R': 'R', 'v': 'V', 'V': 'V-', 'c': 'C', 's': 'S', 'S': 'S-', 't': 'T' }
 set laststatus=2
 
 " NERDTree Configuration
