@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 ANDROID_SDK_PATH="$HOME/android-sdk/macosx"
 ANDROID_PATHS="$ANDROID_SDK_PATH/platform-tools:$ANDROID_SDK_PATH/tools"
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/bin:$ANDROID_PATHS:$HOME/.cargo/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/bin:$ANDROID_PATHS:$HOME/.cargo/bin:$HOME/Library/Python/2.7/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
