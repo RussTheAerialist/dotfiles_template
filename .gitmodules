@@ -31,9 +31,6 @@
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/rust.vim"]
-	path = vim/bundle/rust.vim
-	url = https://github.com/wting/rust.vim.git
 [submodule "vim/bundle/vim-arduino-syntax"]
 	path = vim/bundle/vim-arduino-syntax
 	url = https://github.com/sudar/vim-arduino-syntax
@@ -64,3 +61,12 @@
 [submodule "vim/bundle/jedi-vim"]
 	path = vim/bundle/jedi-vim
 	url = git@github.com:davidhalter/jedi-vim.git
+[submodule "vim/bundle/vim-racer"]
+	path = vim/bundle/vim-racer
+	url = https://github.com/racer-rust/vim-racer
+[submodule "vim/bundle/dash.vim"]
+	path = vim/bundle/dash.vim
+	url = https://github.com/rizzatti/dash.vim
+[submodule "vim/bundle/vim-airline-themes"]
+	path = vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes

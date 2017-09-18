@@ -6,6 +6,10 @@
     ~/.taskrc: taskrc
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.vim: vim/
+    ~/.iterm2_shell_integration.zsh: iterm2_shell_integration.zsh
+    ~/.tmux.conf: tmux.conf
+    ~/.npmrc: npmrc
+    ~/.gitconfig: gitconfig
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]

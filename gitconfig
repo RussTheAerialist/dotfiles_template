@@ -1,0 +1,19 @@
+[user]
+	name = Russell Hay
+	email = me@russellhay.com
+[push]
+	default = simple
+
+[core]
+	excludesfiles = ~/.gitignore
+	editor = vim
+
+[alias]
+	who = shortlog -s --
+	cam = commit -a -m
+	start = checkout demo-start
+	next = !git checkout `git rev-list HEAD..demo-end | tail -1`
+	prev = checkout HEAD^
+
+[branch]
+        autosetuprebase = always

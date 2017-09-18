@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 ANDROID_SDK_PATH="$HOME/android-sdk/macosx"
 ANDROID_PATHS="$ANDROID_SDK_PATH/platform-tools:$ANDROID_SDK_PATH/tools"
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/bin:$ANDROID_PATHS:$HOME/.cargo/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/bin:$ANDROID_PATHS:$HOME/.cargo/bin:$HOME/Library/Python/2.7/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -85,7 +85,12 @@ export P4CONFIG=.p4config
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=`which vim`
-alias fuck='sudo $(fc -ln -1)'
+epsync() { aws s3 sync --acl public-read $@ $HOME/poorimpulse_audio s3://episodes.poorimpulse.co }
+function pie() {
+  mp3info -p "%f %m:%s " $1
+  ls -l $1 | cut -d\  -f8
+}
+alias lss='ls -lSrh'
 
 function mdhdr () { grep -e '^#' $1 }
 function mdcnthdr () { mdhdr $1 | sort | uniq -c }
@@ -102,8 +107,18 @@ function wcc () {
   rm -rf /tmp/chp
 }
 
+function vict() {
+  vi $1 && cargo 'test'
+}
+
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
+fi
+
+export RUST_SRC_PATH=$HOME/.rustc/rustc/src
+
+if [ $(uname) = "Darwin" ]; then
+  source $HOME/.iterm2_shell_integration.zsh
 fi
 
 # added by travis gem
