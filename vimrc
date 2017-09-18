@@ -66,3 +66,4 @@ let g:jedi#show_call_signatures="2"
 " special indent settings
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType js setlocal shiftwidth=2 tabstop=2
+au BufRead,BufNewFile *.fountain set filetype=fountain
